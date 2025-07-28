@@ -1,0 +1,1546 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+]=]
+
+-- Instances: 95 | Scripts: 12 | Modules: 0 | Tags: 0
+local G2L = {};
+
+-- StarterGui.ScreenGui1
+G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+G2L["1"]["Name"] = [[ScreenGui1]];
+G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- StarterGui.ScreenGui1.Templates
+G2L["2"] = Instance.new("Folder", G2L["1"]);
+G2L["2"]["Name"] = [[Templates]];
+
+
+-- StarterGui.ScreenGui1.Templates.Player
+G2L["3"] = Instance.new("Frame", G2L["2"]);
+G2L["3"]["Visible"] = false;
+G2L["3"]["Active"] = true;
+G2L["3"]["BorderSizePixel"] = 0;
+G2L["3"]["Size"] = UDim2.new(0.21898, 0, 0.27855, 0);
+G2L["3"]["Position"] = UDim2.new(0.75282, 0, 0.5, 0);
+G2L["3"]["Name"] = [[Player]];
+G2L["3"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.UIAspectRatioConstraint
+G2L["4"] = Instance.new("UIAspectRatioConstraint", G2L["3"]);
+G2L["4"]["AspectRatio"] = 1.45625;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Rectangle 4
+G2L["5"] = Instance.new("Frame", G2L["3"]);
+G2L["5"]["Active"] = true;
+G2L["5"]["ZIndex"] = -1;
+G2L["5"]["BorderSizePixel"] = 0;
+G2L["5"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5"]["Size"] = UDim2.new(0, 233, 0, 160);
+G2L["5"]["Position"] = UDim2.new(0, 0, -0.0875, 0);
+G2L["5"]["Name"] = [[Rectangle 4]];
+G2L["5"]["BackgroundTransparency"] = 0.81;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Rectangle 4.UIStroke
+G2L["6"] = Instance.new("UIStroke", G2L["5"]);
+G2L["6"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["6"]["Thickness"] = 0;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Rectangle 4.UICorner
+G2L["7"] = Instance.new("UICorner", G2L["5"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Rectangle 4.UIAspectRatioConstraint
+G2L["8"] = Instance.new("UIAspectRatioConstraint", G2L["5"]);
+G2L["8"]["AspectRatio"] = 1.45625;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.WalkSpeed
+G2L["9"] = Instance.new("TextLabel", G2L["3"]);
+G2L["9"]["TextWrapped"] = true;
+G2L["9"]["Active"] = true;
+G2L["9"]["BorderSizePixel"] = 0;
+G2L["9"]["TextSize"] = 25;
+G2L["9"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["9"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["9"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["9"]["BackgroundTransparency"] = 1;
+G2L["9"]["Size"] = UDim2.new(0, 130, 0, 27);
+G2L["9"]["Text"] = [[WalkSpeed]];
+G2L["9"]["Name"] = [[WalkSpeed]];
+G2L["9"]["Position"] = UDim2.new(0, 12, 0, 24);
+
+
+-- StarterGui.ScreenGui1.Templates.Player.WalkSpeed.UIAspectRatioConstraint
+G2L["a"] = Instance.new("UIAspectRatioConstraint", G2L["9"]);
+G2L["a"]["AspectRatio"] = 4.81481;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.WalkSpeed.(not recommended to go over 30)
+G2L["b"] = Instance.new("TextLabel", G2L["9"]);
+G2L["b"]["TextWrapped"] = true;
+G2L["b"]["Active"] = true;
+G2L["b"]["BorderSizePixel"] = 0;
+G2L["b"]["TextSize"] = 11;
+G2L["b"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["b"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["b"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["b"]["BackgroundTransparency"] = 1;
+G2L["b"]["Size"] = UDim2.new(0, 168, 0, 27);
+G2L["b"]["Text"] = [[(not recommended to go over 40)]];
+G2L["b"]["Name"] = [[(not recommended to go over 30)]];
+G2L["b"]["Position"] = UDim2.new(0, 0, 0, -12);
+
+
+-- StarterGui.ScreenGui1.Templates.Player.WalkSpeed.(not recommended to go over 30).UIAspectRatioConstraint
+G2L["c"] = Instance.new("UIAspectRatioConstraint", G2L["b"]);
+G2L["c"]["AspectRatio"] = 6.22222;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.JumpPower
+G2L["d"] = Instance.new("TextLabel", G2L["3"]);
+G2L["d"]["TextWrapped"] = true;
+G2L["d"]["Active"] = true;
+G2L["d"]["BorderSizePixel"] = 0;
+G2L["d"]["TextSize"] = 25;
+G2L["d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["d"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["d"]["BackgroundTransparency"] = 1;
+G2L["d"]["Size"] = UDim2.new(0, 130, 0, 27);
+G2L["d"]["Text"] = [[JumpPower
+]];
+G2L["d"]["Name"] = [[JumpPower]];
+G2L["d"]["Position"] = UDim2.new(0, 12, 0, 71);
+
+
+-- StarterGui.ScreenGui1.Templates.Player.JumpPower.UIAspectRatioConstraint
+G2L["e"] = Instance.new("UIAspectRatioConstraint", G2L["d"]);
+G2L["e"]["AspectRatio"] = 4.81481;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.JumpPower.(not recommended to go over smthin)
+G2L["f"] = Instance.new("TextLabel", G2L["d"]);
+G2L["f"]["TextWrapped"] = true;
+G2L["f"]["Active"] = true;
+G2L["f"]["BorderSizePixel"] = 0;
+G2L["f"]["TextSize"] = 11;
+G2L["f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["f"]["BackgroundTransparency"] = 1;
+G2L["f"]["Size"] = UDim2.new(0, 181, 0, 27);
+G2L["f"]["Text"] = [[(not recommended to go over 30)]];
+G2L["f"]["Name"] = [[(not recommended to go over smthin)]];
+G2L["f"]["Position"] = UDim2.new(0, 0, 0, -5);
+
+
+-- StarterGui.ScreenGui1.Templates.Player.JumpPower.(not recommended to go over smthin).UIAspectRatioConstraint
+G2L["10"] = Instance.new("UIAspectRatioConstraint", G2L["f"]);
+G2L["10"]["AspectRatio"] = 6.7037;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.GravitySetter
+G2L["11"] = Instance.new("TextLabel", G2L["3"]);
+G2L["11"]["TextWrapped"] = true;
+G2L["11"]["Active"] = true;
+G2L["11"]["BorderSizePixel"] = 0;
+G2L["11"]["TextSize"] = 25;
+G2L["11"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["11"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["11"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["11"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["11"]["BackgroundTransparency"] = 1;
+G2L["11"]["Size"] = UDim2.new(0, 141, 0, 27);
+G2L["11"]["Text"] = [[GravitySetter]];
+G2L["11"]["Name"] = [[GravitySetter]];
+G2L["11"]["Position"] = UDim2.new(0, 12, 0, 112);
+
+
+-- StarterGui.ScreenGui1.Templates.Player.GravitySetter.UIAspectRatioConstraint
+G2L["12"] = Instance.new("UIAspectRatioConstraint", G2L["11"]);
+G2L["12"]["AspectRatio"] = 5.22222;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Gravity
+G2L["13"] = Instance.new("TextBox", G2L["3"]);
+G2L["13"]["Name"] = [[Gravity]];
+G2L["13"]["PlaceholderColor3"] = Color3.fromRGB(111, 180, 0);
+G2L["13"]["BorderSizePixel"] = 0;
+G2L["13"]["BackgroundColor3"] = Color3.fromRGB(218, 218, 218);
+G2L["13"]["Selectable"] = false;
+G2L["13"]["PlaceholderText"] = [[---input]];
+G2L["13"]["Size"] = UDim2.new(0, 66, 0, 17);
+G2L["13"]["Position"] = UDim2.new(0, 158, 0, 122);
+G2L["13"]["Text"] = [[]];
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Gravity.UICorner
+G2L["14"] = Instance.new("UICorner", G2L["13"]);
+G2L["14"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Gravity.UIAspectRatioConstraint
+G2L["15"] = Instance.new("UIAspectRatioConstraint", G2L["13"]);
+G2L["15"]["AspectRatio"] = 3.88235;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Gravity.LocalScript
+G2L["16"] = Instance.new("LocalScript", G2L["13"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Player.jump
+G2L["17"] = Instance.new("TextBox", G2L["3"]);
+G2L["17"]["Name"] = [[jump]];
+G2L["17"]["PlaceholderColor3"] = Color3.fromRGB(111, 180, 0);
+G2L["17"]["BorderSizePixel"] = 0;
+G2L["17"]["BackgroundColor3"] = Color3.fromRGB(218, 218, 218);
+G2L["17"]["Selectable"] = false;
+G2L["17"]["PlaceholderText"] = [[---input]];
+G2L["17"]["Size"] = UDim2.new(0, 66, 0, 17);
+G2L["17"]["Position"] = UDim2.new(0, 142, 0, 80);
+G2L["17"]["Text"] = [[]];
+
+
+-- StarterGui.ScreenGui1.Templates.Player.jump.UICorner
+G2L["18"] = Instance.new("UICorner", G2L["17"]);
+G2L["18"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.ScreenGui1.Templates.Player.jump.UIAspectRatioConstraint
+G2L["19"] = Instance.new("UIAspectRatioConstraint", G2L["17"]);
+G2L["19"]["AspectRatio"] = 3.88235;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.jump.LocalScript
+G2L["1a"] = Instance.new("LocalScript", G2L["17"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Player.speed
+G2L["1b"] = Instance.new("TextBox", G2L["3"]);
+G2L["1b"]["Name"] = [[speed]];
+G2L["1b"]["PlaceholderColor3"] = Color3.fromRGB(111, 180, 0);
+G2L["1b"]["BorderSizePixel"] = 0;
+G2L["1b"]["BackgroundColor3"] = Color3.fromRGB(218, 218, 218);
+G2L["1b"]["Selectable"] = false;
+G2L["1b"]["PlaceholderText"] = [[---input]];
+G2L["1b"]["Size"] = UDim2.new(0, 66, 0, 17);
+G2L["1b"]["Position"] = UDim2.new(0, 137, 0, 30);
+G2L["1b"]["Text"] = [[]];
+
+
+-- StarterGui.ScreenGui1.Templates.Player.speed.UICorner
+G2L["1c"] = Instance.new("UICorner", G2L["1b"]);
+G2L["1c"]["CornerRadius"] = UDim.new(0, 5);
+
+
+-- StarterGui.ScreenGui1.Templates.Player.speed.UIAspectRatioConstraint
+G2L["1d"] = Instance.new("UIAspectRatioConstraint", G2L["1b"]);
+G2L["1d"]["AspectRatio"] = 3.88235;
+
+
+-- StarterGui.ScreenGui1.Templates.Player.speed.LocalScript
+G2L["1e"] = Instance.new("LocalScript", G2L["1b"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Visual
+G2L["1f"] = Instance.new("Frame", G2L["2"]);
+G2L["1f"]["Visible"] = false;
+G2L["1f"]["Active"] = true;
+G2L["1f"]["BorderSizePixel"] = 0;
+G2L["1f"]["Size"] = UDim2.new(0.21898, 0, 0.27855, 0);
+G2L["1f"]["Position"] = UDim2.new(0.74154, 0, 0.47, 0);
+G2L["1f"]["Name"] = [[Visual]];
+G2L["1f"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.UIAspectRatioConstraint
+G2L["20"] = Instance.new("UIAspectRatioConstraint", G2L["1f"]);
+G2L["20"]["AspectRatio"] = 1.45625;
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Rectangle 4
+G2L["21"] = Instance.new("Frame", G2L["1f"]);
+G2L["21"]["Active"] = true;
+G2L["21"]["ZIndex"] = -4;
+G2L["21"]["BorderSizePixel"] = 0;
+G2L["21"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["21"]["Size"] = UDim2.new(0, 233, 0, 160);
+G2L["21"]["Position"] = UDim2.new(0.09871, 0, 0, 0);
+G2L["21"]["Name"] = [[Rectangle 4]];
+G2L["21"]["BackgroundTransparency"] = 0.81;
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Rectangle 4.UIStroke
+G2L["22"] = Instance.new("UIStroke", G2L["21"]);
+G2L["22"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["22"]["Thickness"] = 0;
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Rectangle 4.UICorner
+G2L["23"] = Instance.new("UICorner", G2L["21"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Rectangle 4.UIAspectRatioConstraint
+G2L["24"] = Instance.new("UIAspectRatioConstraint", G2L["21"]);
+G2L["24"]["AspectRatio"] = 1.45625;
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp Players
+G2L["25"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["25"]["TextWrapped"] = true;
+G2L["25"]["Active"] = true;
+G2L["25"]["BorderSizePixel"] = 0;
+G2L["25"]["TextSize"] = 25;
+G2L["25"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["25"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["25"]["BackgroundColor3"] = Color3.fromRGB(166, 0, 0);
+G2L["25"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["25"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["25"]["BackgroundTransparency"] = 1;
+G2L["25"]["Size"] = UDim2.new(0, 104, 0, 34);
+G2L["25"]["Text"] = [[Esp Players]];
+G2L["25"]["Name"] = [[Esp Players]];
+G2L["25"]["Position"] = UDim2.new(0, 58, 0, 7);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp Players.UIAspectRatioConstraint
+G2L["26"] = Instance.new("UIAspectRatioConstraint", G2L["25"]);
+G2L["26"]["AspectRatio"] = 5;
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp Players.Frame
+G2L["27"] = Instance.new("ImageButton", G2L["25"]);
+G2L["27"]["Active"] = false;
+G2L["27"]["BorderSizePixel"] = 0;
+G2L["27"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["27"]["Selectable"] = false;
+G2L["27"]["ZIndex"] = 2;
+G2L["27"]["Size"] = UDim2.new(0, 33, 0, 30);
+G2L["27"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["27"]["Name"] = [[Frame]];
+G2L["27"]["Position"] = UDim2.new(1.11538, 0, 0, 0);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp Players.Frame.UICorner
+G2L["28"] = Instance.new("UICorner", G2L["27"]);
+G2L["28"]["CornerRadius"] = UDim.new(0, 50);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp Players.Frame.LocalScript
+G2L["29"] = Instance.new("LocalScript", G2L["27"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp rare brainrots
+G2L["2a"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["2a"]["TextWrapped"] = true;
+G2L["2a"]["Active"] = true;
+G2L["2a"]["BorderSizePixel"] = 0;
+G2L["2a"]["TextSize"] = 25;
+G2L["2a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["2a"]["BackgroundColor3"] = Color3.fromRGB(166, 0, 0);
+G2L["2a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2a"]["BackgroundTransparency"] = 1;
+G2L["2a"]["Size"] = UDim2.new(0, 192, 0, 27);
+G2L["2a"]["Text"] = [[Esp rare brainrots]];
+G2L["2a"]["Name"] = [[Esp rare brainrots]];
+G2L["2a"]["Position"] = UDim2.new(0, 37, 0, 121);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp rare brainrots.UIAspectRatioConstraint
+G2L["2b"] = Instance.new("UIAspectRatioConstraint", G2L["2a"]);
+G2L["2b"]["AspectRatio"] = 7.11111;
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp rare brainrots.Frame
+G2L["2c"] = Instance.new("ImageButton", G2L["2a"]);
+G2L["2c"]["Active"] = false;
+G2L["2c"]["BorderSizePixel"] = 0;
+G2L["2c"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["2c"]["Selectable"] = false;
+G2L["2c"]["ZIndex"] = 2;
+G2L["2c"]["Size"] = UDim2.new(0, 33, 0, 30);
+G2L["2c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["2c"]["Name"] = [[Frame]];
+G2L["2c"]["Position"] = UDim2.new(0.84255, 0, -0.07799, 0);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp rare brainrots.Frame.UICorner
+G2L["2d"] = Instance.new("UICorner", G2L["2c"]);
+G2L["2d"]["CornerRadius"] = UDim.new(0, 50);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp rare brainrots.Frame.LocalScript
+G2L["2e"] = Instance.new("LocalScript", G2L["2c"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp base timer
+G2L["2f"] = Instance.new("TextLabel", G2L["1f"]);
+G2L["2f"]["TextWrapped"] = true;
+G2L["2f"]["Active"] = true;
+G2L["2f"]["BorderSizePixel"] = 0;
+G2L["2f"]["TextSize"] = 25;
+G2L["2f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["2f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["2f"]["BackgroundColor3"] = Color3.fromRGB(166, 0, 0);
+G2L["2f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["2f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["2f"]["BackgroundTransparency"] = 1;
+G2L["2f"]["Size"] = UDim2.new(0, 147, 0, 27);
+G2L["2f"]["Text"] = [[Esp base timer]];
+G2L["2f"]["Name"] = [[Esp base timer]];
+G2L["2f"]["Position"] = UDim2.new(0, 50, 0, 66);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp base timer.UIAspectRatioConstraint
+G2L["30"] = Instance.new("UIAspectRatioConstraint", G2L["2f"]);
+G2L["30"]["AspectRatio"] = 7.11111;
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp base timer.Frame
+G2L["31"] = Instance.new("ImageButton", G2L["2f"]);
+G2L["31"]["Active"] = false;
+G2L["31"]["BorderSizePixel"] = 0;
+G2L["31"]["BackgroundColor3"] = Color3.fromRGB(255, 0, 5);
+G2L["31"]["Selectable"] = false;
+G2L["31"]["ZIndex"] = 2;
+G2L["31"]["Size"] = UDim2.new(0, 33, 0, 30);
+G2L["31"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["31"]["Name"] = [[Frame]];
+G2L["31"]["Position"] = UDim2.new(0.927, 0, 0.03258, 0);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp base timer.Frame.UICorner
+G2L["32"] = Instance.new("UICorner", G2L["31"]);
+G2L["32"]["CornerRadius"] = UDim.new(0, 50);
+
+
+-- StarterGui.ScreenGui1.Templates.Visual.Esp base timer.Frame.LocalScript
+G2L["33"] = Instance.new("LocalScript", G2L["31"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Steal
+G2L["34"] = Instance.new("Frame", G2L["2"]);
+G2L["34"]["Visible"] = false;
+G2L["34"]["Active"] = true;
+G2L["34"]["BorderSizePixel"] = 0;
+G2L["34"]["Size"] = UDim2.new(0.20865, 0, 0.2654, 0);
+G2L["34"]["Position"] = UDim2.new(0.7594, 0, 0.47, 0);
+G2L["34"]["Name"] = [[Steal]];
+G2L["34"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.serverHop
+G2L["35"] = Instance.new("TextButton", G2L["34"]);
+G2L["35"]["TextWrapped"] = true;
+G2L["35"]["BorderSizePixel"] = 0;
+G2L["35"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["35"]["TextSize"] = 25;
+G2L["35"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["35"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["35"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["35"]["Selectable"] = false;
+G2L["35"]["BackgroundTransparency"] = 1;
+G2L["35"]["Size"] = UDim2.new(0, 108, 0, 27);
+G2L["35"]["Text"] = [[serverHop]];
+G2L["35"]["Name"] = [[serverHop]];
+G2L["35"]["Position"] = UDim2.new(0, 7, 0, 19);
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.serverHop.UIAspectRatioConstraint
+G2L["36"] = Instance.new("UIAspectRatioConstraint", G2L["35"]);
+G2L["36"]["AspectRatio"] = 4;
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.serverHop.LocalScript
+G2L["37"] = Instance.new("LocalScript", G2L["35"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Bypass AC
+G2L["38"] = Instance.new("TextButton", G2L["34"]);
+G2L["38"]["TextWrapped"] = true;
+G2L["38"]["BorderSizePixel"] = 0;
+G2L["38"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["38"]["TextSize"] = 25;
+G2L["38"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["38"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["38"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["38"]["Selectable"] = false;
+G2L["38"]["BackgroundTransparency"] = 1;
+G2L["38"]["Size"] = UDim2.new(0, 136, 0, 27);
+G2L["38"]["Text"] = [[Bypass AC]];
+G2L["38"]["Name"] = [[Bypass AC]];
+G2L["38"]["Position"] = UDim2.new(0, 7, 0, 107);
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Bypass AC.UIAspectRatioConstraint
+G2L["39"] = Instance.new("UIAspectRatioConstraint", G2L["38"]);
+G2L["39"]["AspectRatio"] = 5.03704;
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Bypass AC.(not fully functional)
+G2L["3a"] = Instance.new("TextLabel", G2L["38"]);
+G2L["3a"]["TextWrapped"] = true;
+G2L["3a"]["Active"] = true;
+G2L["3a"]["BorderSizePixel"] = 0;
+G2L["3a"]["TextSize"] = 11;
+G2L["3a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["3a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3a"]["BackgroundTransparency"] = 1;
+G2L["3a"]["Size"] = UDim2.new(0, 181, 0, 27);
+G2L["3a"]["Text"] = [[(not fully functional)]];
+G2L["3a"]["Name"] = [[(not fully functional)]];
+G2L["3a"]["Position"] = UDim2.new(0, 1, 0, -7);
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Bypass AC.(not fully functional).UIAspectRatioConstraint
+G2L["3b"] = Instance.new("UIAspectRatioConstraint", G2L["3a"]);
+G2L["3b"]["AspectRatio"] = 6.7037;
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Bypass AC.LocalScript
+G2L["3c"] = Instance.new("LocalScript", G2L["38"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Anti Ragdoll
+G2L["3d"] = Instance.new("TextButton", G2L["34"]);
+G2L["3d"]["TextWrapped"] = true;
+G2L["3d"]["BorderSizePixel"] = 0;
+G2L["3d"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["3d"]["TextSize"] = 25;
+G2L["3d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["3d"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["3d"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["3d"]["Selectable"] = false;
+G2L["3d"]["BackgroundTransparency"] = 1;
+G2L["3d"]["Size"] = UDim2.new(0, 132, 0, 27);
+G2L["3d"]["Text"] = [[Anti Ragdoll]];
+G2L["3d"]["Name"] = [[Anti Ragdoll]];
+G2L["3d"]["Position"] = UDim2.new(0, 7, 0, 64);
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Anti Ragdoll.UIAspectRatioConstraint
+G2L["3e"] = Instance.new("UIAspectRatioConstraint", G2L["3d"]);
+G2L["3e"]["AspectRatio"] = 4.88889;
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Anti Ragdoll.LocalScript
+G2L["3f"] = Instance.new("LocalScript", G2L["3d"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.UIAspectRatioConstraint
+G2L["40"] = Instance.new("UIAspectRatioConstraint", G2L["34"]);
+G2L["40"]["AspectRatio"] = 1.45625;
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Rectangle 4
+G2L["41"] = Instance.new("Frame", G2L["34"]);
+G2L["41"]["Active"] = true;
+G2L["41"]["ZIndex"] = -1;
+G2L["41"]["BorderSizePixel"] = 0;
+G2L["41"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["41"]["Size"] = UDim2.new(0, 233, 0, 151);
+G2L["41"]["Position"] = UDim2.new(-0.0045, 0, 0.06937, 0);
+G2L["41"]["Name"] = [[Rectangle 4]];
+G2L["41"]["BackgroundTransparency"] = 0.81;
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Rectangle 4.UIStroke
+G2L["42"] = Instance.new("UIStroke", G2L["41"]);
+G2L["42"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["42"]["Thickness"] = 0;
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Rectangle 4.UICorner
+G2L["43"] = Instance.new("UICorner", G2L["41"]);
+
+
+
+-- StarterGui.ScreenGui1.Templates.Steal.Rectangle 4.UIAspectRatioConstraint
+G2L["44"] = Instance.new("UIAspectRatioConstraint", G2L["41"]);
+G2L["44"]["AspectRatio"] = 1.45625;
+
+
+-- StarterGui.ScreenGui1.dashboard
+G2L["45"] = Instance.new("Frame", G2L["1"]);
+G2L["45"]["Active"] = true;
+G2L["45"]["BorderSizePixel"] = 0;
+G2L["45"]["Size"] = UDim2.new(0.22086, 0, 0.45554, 0);
+G2L["45"]["Position"] = UDim2.new(0.75282, 0, 0.38127, 0);
+G2L["45"]["Name"] = [[dashboard]];
+G2L["45"]["BackgroundTransparency"] = 1;
+
+
+-- StarterGui.ScreenGui1.dashboard.UIAspectRatioConstraint
+G2L["46"] = Instance.new("UIAspectRatioConstraint", G2L["45"]);
+G2L["46"]["DominantAxis"] = Enum.DominantAxis.Height;
+G2L["46"]["AspectRatio"] = 0.89811;
+
+
+-- StarterGui.ScreenGui1.dashboard.STEAL A hub
+G2L["47"] = Instance.new("TextLabel", G2L["45"]);
+G2L["47"]["TextWrapped"] = true;
+G2L["47"]["Active"] = true;
+G2L["47"]["BorderSizePixel"] = 0;
+G2L["47"]["TextSize"] = 25;
+G2L["47"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["47"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["47"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["47"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["47"]["BackgroundTransparency"] = 1;
+G2L["47"]["Size"] = UDim2.new(0, 172, 0, 16);
+G2L["47"]["Text"] = [[STEAL A hub]];
+G2L["47"]["Name"] = [[STEAL A hub]];
+G2L["47"]["Position"] = UDim2.new(0, 46, 0, -19);
+
+
+-- StarterGui.ScreenGui1.dashboard.STEAL A hub.UIStroke
+G2L["48"] = Instance.new("UIStroke", G2L["47"]);
+G2L["48"]["LineJoinMode"] = Enum.LineJoinMode.Miter;
+
+
+-- StarterGui.ScreenGui1.dashboard.STEAL A hub.UIAspectRatioConstraint
+G2L["49"] = Instance.new("UIAspectRatioConstraint", G2L["47"]);
+G2L["49"]["AspectRatio"] = 10.58824;
+
+
+-- StarterGui.ScreenGui1.dashboard.v1.0
+G2L["4a"] = Instance.new("TextLabel", G2L["45"]);
+G2L["4a"]["TextWrapped"] = true;
+G2L["4a"]["Active"] = true;
+G2L["4a"]["BorderSizePixel"] = 0;
+G2L["4a"]["TextSize"] = 16;
+G2L["4a"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4a"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["4a"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4a"]["BackgroundTransparency"] = 1;
+G2L["4a"]["Size"] = UDim2.new(0, 37, 0, 18);
+G2L["4a"]["Text"] = [[v1.0]];
+G2L["4a"]["Name"] = [[v1.0]];
+G2L["4a"]["Position"] = UDim2.new(0, 2, 0, 17);
+
+
+-- StarterGui.ScreenGui1.dashboard.v1.0.UIAspectRatioConstraint
+G2L["4b"] = Instance.new("UIAspectRatioConstraint", G2L["4a"]);
+G2L["4b"]["AspectRatio"] = 1.52632;
+
+
+-- StarterGui.ScreenGui1.dashboard.Rectangle 3
+G2L["4c"] = Instance.new("Frame", G2L["45"]);
+G2L["4c"]["Active"] = true;
+G2L["4c"]["BorderSizePixel"] = 0;
+G2L["4c"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["4c"]["Size"] = UDim2.new(0, 238, 0, 3);
+G2L["4c"]["Position"] = UDim2.new(0, 0, 0, 63);
+G2L["4c"]["Name"] = [[Rectangle 3]];
+
+
+-- StarterGui.ScreenGui1.dashboard.Rectangle 3.UICorner
+G2L["4d"] = Instance.new("UICorner", G2L["4c"]);
+G2L["4d"]["CornerRadius"] = UDim.new(0, 2);
+
+
+-- StarterGui.ScreenGui1.dashboard.Rectangle 3.UIAspectRatioConstraint
+G2L["4e"] = Instance.new("UIAspectRatioConstraint", G2L["4c"]);
+G2L["4e"]["AspectRatio"] = 79.33333;
+
+
+-- StarterGui.ScreenGui1.dashboard.plr
+G2L["4f"] = Instance.new("TextButton", G2L["45"]);
+G2L["4f"]["TextWrapped"] = true;
+G2L["4f"]["BorderSizePixel"] = 0;
+G2L["4f"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["4f"]["TextSize"] = 25;
+G2L["4f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["4f"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["4f"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["4f"]["BackgroundTransparency"] = 1;
+G2L["4f"]["Size"] = UDim2.new(0, 29, 0, 30);
+G2L["4f"]["Text"] = [[Plr
+]];
+G2L["4f"]["Name"] = [[plr]];
+G2L["4f"]["Position"] = UDim2.new(0, 10, 0, 64);
+
+
+-- StarterGui.ScreenGui1.dashboard.plr.UIAspectRatioConstraint
+G2L["50"] = Instance.new("UIAspectRatioConstraint", G2L["4f"]);
+G2L["50"]["AspectRatio"] = 0.96667;
+
+
+-- StarterGui.ScreenGui1.dashboard.plr.LocalScript
+G2L["51"] = Instance.new("LocalScript", G2L["4f"]);
+
+
+
+-- StarterGui.ScreenGui1.dashboard.visual
+G2L["52"] = Instance.new("TextButton", G2L["45"]);
+G2L["52"]["TextWrapped"] = true;
+G2L["52"]["BorderSizePixel"] = 0;
+G2L["52"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["52"]["TextSize"] = 25;
+G2L["52"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["52"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["52"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["52"]["BackgroundTransparency"] = 1;
+G2L["52"]["Size"] = UDim2.new(0, 64, 0, 29);
+G2L["52"]["Text"] = [[Visual]];
+G2L["52"]["Name"] = [[visual]];
+G2L["52"]["Position"] = UDim2.new(0, 165, 0, 66);
+
+
+-- StarterGui.ScreenGui1.dashboard.visual.UIAspectRatioConstraint
+G2L["53"] = Instance.new("UIAspectRatioConstraint", G2L["52"]);
+G2L["53"]["AspectRatio"] = 2.2069;
+
+
+-- StarterGui.ScreenGui1.dashboard.visual.LocalScript
+G2L["54"] = Instance.new("LocalScript", G2L["52"]);
+
+
+
+-- StarterGui.ScreenGui1.dashboard.stealer
+G2L["55"] = Instance.new("TextButton", G2L["45"]);
+G2L["55"]["TextWrapped"] = true;
+G2L["55"]["BorderSizePixel"] = 0;
+G2L["55"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+G2L["55"]["TextSize"] = 25;
+G2L["55"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+G2L["55"]["TextYAlignment"] = Enum.TextYAlignment.Top;
+G2L["55"]["FontFace"] = Font.new([[rbxasset://fonts/families/Itim.json]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+G2L["55"]["BackgroundTransparency"] = 1;
+G2L["55"]["Size"] = UDim2.new(0, 74, 0, 29);
+G2L["55"]["Text"] = [[Stealer]];
+G2L["55"]["Name"] = [[stealer]];
+G2L["55"]["Position"] = UDim2.new(0, 72, 0, 66);
+
+
+-- StarterGui.ScreenGui1.dashboard.stealer.UIAspectRatioConstraint
+G2L["56"] = Instance.new("UIAspectRatioConstraint", G2L["55"]);
+G2L["56"]["AspectRatio"] = 2.55172;
+
+
+-- StarterGui.ScreenGui1.dashboard.stealer.LocalScript
+G2L["57"] = Instance.new("LocalScript", G2L["55"]);
+
+
+
+-- StarterGui.ScreenGui1.dashboard.Rectangle 1
+G2L["58"] = Instance.new("Frame", G2L["45"]);
+G2L["58"]["Active"] = true;
+G2L["58"]["BorderSizePixel"] = 0;
+G2L["58"]["BackgroundColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["58"]["Size"] = UDim2.new(0, 248, 0, 275);
+G2L["58"]["Position"] = UDim2.new(0, -5, 0, -27);
+G2L["58"]["Name"] = [[Rectangle 1]];
+G2L["58"]["BackgroundTransparency"] = 0.81;
+
+
+-- StarterGui.ScreenGui1.dashboard.Rectangle 1.UIStroke
+G2L["59"] = Instance.new("UIStroke", G2L["58"]);
+G2L["59"]["ApplyStrokeMode"] = Enum.ApplyStrokeMode.Border;
+G2L["59"]["Thickness"] = 5;
+
+
+-- StarterGui.ScreenGui1.dashboard.Rectangle 1.UICorner
+G2L["5a"] = Instance.new("UICorner", G2L["58"]);
+
+
+
+-- StarterGui.ScreenGui1.dashboard.Rectangle 1.UIAspectRatioConstraint
+G2L["5b"] = Instance.new("UIAspectRatioConstraint", G2L["58"]);
+G2L["5b"]["DominantAxis"] = Enum.DominantAxis.Height;
+G2L["5b"]["AspectRatio"] = 0.89811;
+
+
+-- StarterGui.ScreenGui1.dashboard.gato
+G2L["5c"] = Instance.new("ImageLabel", G2L["45"]);
+G2L["5c"]["BorderSizePixel"] = 0;
+G2L["5c"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+G2L["5c"]["Image"] = [[rbxassetid://10670510697]];
+G2L["5c"]["Size"] = UDim2.new(0, 39, 0, 42);
+G2L["5c"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+G2L["5c"]["BackgroundTransparency"] = 1;
+G2L["5c"]["Name"] = [[gato]];
+G2L["5c"]["Position"] = UDim2.new(-0.00844, 0, -0.09474, 0);
+
+
+-- StarterGui.ScreenGui1.dashboard.gato.UICorner
+G2L["5d"] = Instance.new("UICorner", G2L["5c"]);
+
+
+
+-- StarterGui.ScreenGui1.Currect
+G2L["5e"] = Instance.new("StringValue", G2L["1"]);
+G2L["5e"]["Name"] = [[Currect]];
+
+
+-- StarterGui.ScreenGui1.Position
+G2L["5f"] = Instance.new("StringValue", G2L["1"]);
+G2L["5f"]["Name"] = [[Position]];
+G2L["5f"]["Value"] = [[0.578, 0,0.606, 0]];
+
+
+-- StarterGui.ScreenGui1.Templates.Player.Gravity.LocalScript
+local function C_16()
+local script = G2L["16"];
+	local textBox = script.Parent
+	local defaultGravity = 196
+	workspace.Gravity = defaultGravity
+	
+	textBox.Text = tostring(defaultGravity)
+	
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local newGrav = tonumber(textBox.Text)
+			if newGrav and newGrav > 0 then
+				workspace.Gravity = newGrav
+				textBox.Text = "Gravity: " .. newGrav
+			else
+				textBox.Text = "Invalid"
+				workspace.Gravity = defaultGravity
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_16);
+-- StarterGui.ScreenGui1.Templates.Player.jump.LocalScript
+local function C_1a()
+local script = G2L["1a"];
+	local textBox = script.Parent
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	local defaultJumpPower = 50.145
+	local defaultJumpHeight = 7.2
+	local jumpValuePower = defaultJumpPower
+	local jumpValueHeight = defaultJumpHeight
+	local jpConnection
+	local charConnection
+	local function applyJumpPower()
+		local char = player.Character
+		if not char then return end
+		local humanoid = char:FindFirstChildOfClass("Humanoid")
+		if humanoid then
+			if humanoid.UseJumpPower then
+				humanoid.JumpPower = jumpValuePower
+			else
+				humanoid.JumpHeight = jumpValueHeight
+			end
+			if jpConnection then jpConnection:Disconnect() end
+			jpConnection = humanoid:GetPropertyChangedSignal(humanoid.UseJumpPower and "JumpPower" or "JumpHeight"):Connect(function()
+				if humanoid.UseJumpPower then
+					humanoid.JumpPower = jumpValuePower
+				else
+					humanoid.JumpHeight = jumpValueHeight
+				end
+			end)
+		end
+	end
+	local function onCharacterAdded(newChar)
+		if charConnection then charConnection:Disconnect() end
+		charConnection = newChar:WaitForChild("Humanoid").Died:Connect(function()
+			if jpConnection then jpConnection:Disconnect() end
+			jpConnection = nil
+		end)
+		task.wait(0.1)
+		applyJumpPower()
+	end
+	player.CharacterAdded:Connect(onCharacterAdded)
+	if player.Character then
+		onCharacterAdded(player.Character)
+	end
+	applyJumpPower()
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local inputVal = tonumber(textBox.Text)
+			if inputVal and inputVal > 0 then
+				if player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
+					local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+					if humanoid then
+						if humanoid.UseJumpPower then
+							jumpValuePower = inputVal
+						else
+							jumpValueHeight = inputVal
+						end
+						applyJumpPower()
+						humanoid.Jump = true
+						textBox.Text = "Jump: " .. inputVal
+					else
+						textBox.Text = "No Humanoid"
+					end
+				else
+					textBox.Text = "No Character"
+				end
+			else
+				textBox.Text = "Invalid"
+			end
+		end
+	end)
+end;
+task.spawn(C_1a);
+-- StarterGui.ScreenGui1.Templates.Player.speed.LocalScript
+local function C_1e()
+local script = G2L["1e"];
+	local textBox = script.Parent
+	local Players = game:GetService("Players")
+	local player = Players.LocalPlayer
+	
+	local speed = 16
+	local wsConnection
+	local charConnection
+	
+	-- Apply the speed to the current Humanoid
+	local function applyWalkSpeed()
+		local char = player.Character
+		if not char then return end
+	
+		local humanoid = char:FindFirstChildOfClass("Humanoid")
+		if humanoid then
+			-- Apply WalkSpeed immediately
+			humanoid.WalkSpeed = speed
+	
+			-- Disconnect any previous connection
+			if wsConnection then
+				wsConnection:Disconnect()
+				wsConnection = nil
+			end
+	
+			-- Enforce WalkSpeed if it ever gets changed
+			wsConnection = humanoid:GetPropertyChangedSignal("WalkSpeed"):Connect(function()
+				if humanoid.WalkSpeed ~= speed then
+					humanoid.WalkSpeed = speed
+				end
+			end)
+		end
+	end
+	
+	-- Handle respawn (CharacterAdded)
+	local function onCharacterAdded(newChar)
+		-- Disconnect old Died connection
+		if charConnection then
+			charConnection:Disconnect()
+			charConnection = nil
+		end
+	
+		-- Wait for Humanoid and set up Died cleanup
+		local humanoid = newChar:WaitForChild("Humanoid")
+		charConnection = humanoid.Died:Connect(function()
+			if wsConnection then
+				wsConnection:Disconnect()
+				wsConnection = nil
+			end
+		end)
+	
+		-- Apply the speed after character fully loads
+		task.wait(0.5)
+		applyWalkSpeed()
+	end
+	
+	-- Setup connections
+	player.CharacterAdded:Connect(onCharacterAdded)
+	if player.Character then
+		onCharacterAdded(player.Character)
+	end
+	
+	-- Textbox input to change speed
+	textBox.FocusLost:Connect(function(enterPressed)
+		if enterPressed then
+			local newSpeed = tonumber(textBox.Text)
+			if newSpeed and newSpeed > 0 then
+				speed = newSpeed
+				applyWalkSpeed()
+				textBox.Text = "Speed: " .. speed
+			else
+				textBox.Text = "Invalid"
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_1e);
+-- StarterGui.ScreenGui1.Templates.Visual.Esp Players.Frame.LocalScript
+local function C_29()
+local script = G2L["29"];
+	local Players = game:GetService("Players")
+	local LocalPlayer = Players.LocalPlayer
+	
+	local ESP_ENABLED = false
+	local espObjects = {}
+	
+	local button = script.Parent
+	
+	local function removeESP(player)
+		if espObjects[player] then
+			espObjects[player]:Destroy()
+			espObjects[player] = nil
+		end
+	end
+	
+	local function addESP(player)
+		if player == LocalPlayer then return end
+		if not player.Character then return end
+	
+		local root = player.Character:FindFirstChild("HumanoidRootPart")
+		if root and not espObjects[player] then
+			local highlight = Instance.new("Highlight")
+			highlight.FillColor = Color3.fromRGB(255, 0, 0)
+			highlight.OutlineColor = Color3.fromRGB(255, 255, 255)
+			highlight.FillTransparency = 0.5
+			highlight.OutlineTransparency = 0
+			highlight.Parent = player.Character
+			espObjects[player] = highlight
+		end
+	end
+	
+	local function updateESP()
+		for _, player in ipairs(Players:GetPlayers()) do
+			if player ~= LocalPlayer then
+				removeESP(player)
+				if ESP_ENABLED then
+					addESP(player)
+				end
+			end
+		end
+	end
+	
+	Players.PlayerAdded:Connect(function(player)
+		player.CharacterAdded:Connect(function()
+			if ESP_ENABLED then
+				task.wait(1)
+				addESP(player)
+			end
+		end)
+	end)
+	
+	Players.PlayerRemoving:Connect(removeESP)
+	
+	button.MouseButton1Click:Connect(function()
+		ESP_ENABLED = not ESP_ENABLED
+		if ESP_ENABLED then
+			button.BackgroundColor3 = Color3.fromRGB(0, 255, 0) -- green
+		else
+			button.BackgroundColor3 = Color3.fromRGB(255, 0, 0) -- red
+		end
+		updateESP()
+	end)
+	
+	-- Initial color
+	button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	
+end;
+task.spawn(C_29);
+-- StarterGui.ScreenGui1.Templates.Visual.Esp rare brainrots.Frame.LocalScript
+local function C_2e()
+local script = G2L["2e"];
+	local button = script.Parent
+	local ESP_ENABLED = false
+	local highlights = {}
+	
+	-- List of Brainrots
+	local Anims = {
+		["Cocofanto Elefanto"] = true,
+		["Gattino Nyanino"] = true,
+		["Giraffa Celestre"] = true,
+		["Matteo"] = true,
+		["Tralalero Tralala"] = true,
+		["Orcalero Orcala"] = true,
+		["Tigroligre Frutonni"] = true,
+		["Udin Din Din Dun"] = true,
+		["Unclito Samito"] = true,
+		["Trenostruzzo Turbo 3000"] = true,
+		["Brainrot God Lucky Block"] = true,
+		["La Vaca Saturno Saturnita"] = true,
+		["Chimpanzini Spiderini"] = true,
+		["Los Tralaleritos"] = true,
+		["las tralalitas"] = true,
+		["Graipuss Medussi"] = true,
+		["Torrtuginni DragonFrutini"] = true,
+		["Pot Hotspot"] = true,
+		["La Grande Combasion"] = true,
+		["Garamaraman and Madundung"] = true,
+		["Secret Lucky Block"] = true
+	}
+	
+	local function clearHighlights()
+		for _, h in pairs(highlights) do
+			if h and h.Parent then
+				h:Destroy()
+			end
+		end
+		highlights = {}
+	end
+	
+	local function addHighlight(obj)
+		if highlights[obj] then return end
+		local highlight = Instance.new("Highlight")
+		highlight.FillColor = Color3.fromRGB(255, 255, 0)
+		highlight.OutlineColor = Color3.fromRGB(0, 0, 0)
+		highlight.FillTransparency = 0.5
+		highlight.OutlineTransparency = 0
+		highlight.Parent = obj
+		highlights[obj] = highlight
+	end
+	
+	local function scanBrainrots()
+		for _, descendant in ipairs(workspace:GetDescendants()) do
+			if Anims[descendant.Name] then
+				addHighlight(descendant)
+			end
+		end
+	end
+	
+	workspace.DescendantAdded:Connect(function(descendant)
+		if ESP_ENABLED and Anims[descendant.Name] then
+			addHighlight(descendant)
+		end
+	end)
+	
+	workspace.DescendantRemoving:Connect(function(descendant)
+		if highlights[descendant] then
+			highlights[descendant]:Destroy()
+			highlights[descendant] = nil
+		end
+	end)
+	
+	button.MouseButton1Click:Connect(function()
+		ESP_ENABLED = not ESP_ENABLED
+		if ESP_ENABLED then
+			button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			scanBrainrots()
+		else
+			button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			clearHighlights()
+		end
+	end)
+	
+	button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	
+end;
+task.spawn(C_2e);
+-- StarterGui.ScreenGui1.Templates.Visual.Esp base timer.Frame.LocalScript
+local function C_33()
+local script = G2L["33"];
+	local button = script.Parent
+	local ESP_ENABLED = false
+	local timers = {}
+	
+	local function clearTimers()
+		for _, gui in pairs(timers) do
+			gui:Destroy()
+		end
+		timers = {}
+	end
+	
+	local function addTimers()
+		for _, plot in ipairs(workspace.Plots:GetChildren()) do
+			local billboard = plot:FindFirstChild("Purchases")
+				and plot.Purchases:FindFirstChild("PlotBlock")
+				and plot.Purchases.PlotBlock:FindFirstChild("Main")
+				and plot.Purchases.PlotBlock.Main:FindFirstChild("BillboardGui")
+	
+			if billboard and billboard:FindFirstChild("RemainingTime") then
+				local timerGui = Instance.new("BillboardGui")
+				timerGui.Size = UDim2.new(0, 100, 0, 30)
+				timerGui.StudsOffset = Vector3.new(0, 5, 0)
+				timerGui.AlwaysOnTop = true
+				timerGui.Parent = plot
+	
+				local label = Instance.new("TextLabel", timerGui)
+				label.Size = UDim2.new(1, 0, 1, 0)
+				label.BackgroundTransparency = 1
+				label.TextColor3 = Color3.new(1, 1, 0)
+				label.TextScaled = true
+				label.Font = Enum.Font.GothamBold
+	
+				timers[plot] = timerGui
+	
+				task.spawn(function()
+					while ESP_ENABLED and plot.Parent do
+						label.Text = billboard.RemainingTime.Text
+						task.wait(0.5)
+					end
+					if timers[plot] then
+						timers[plot]:Destroy()
+						timers[plot] = nil
+					end
+				end)
+			end
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		ESP_ENABLED = not ESP_ENABLED
+		if ESP_ENABLED then
+			button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			addTimers()
+		else
+			button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+			clearTimers()
+		end
+	end)
+	
+	button.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+	
+end;
+task.spawn(C_33);
+-- StarterGui.ScreenGui1.Templates.Steal.serverHop.LocalScript
+local function C_37()
+local script = G2L["37"];
+	local TeleportService = game:GetService("TeleportService")
+	local Players = game:GetService("Players")
+	local placeId = game.PlaceId
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		local player = Players.LocalPlayer
+		TeleportService:Teleport(placeId, player)
+	end)
+	
+end;
+task.spawn(C_37);
+-- StarterGui.ScreenGui1.Templates.Steal.Bypass AC.LocalScript
+local function C_3c()
+local script = G2L["3c"];
+	local plr = game.Players.LocalPlayer
+	local char = plr.Character or plr.CharacterAdded:Wait()
+	local root = char:WaitForChild("HumanoidRootPart")
+	local hum = char:WaitForChild("Humanoid")
+	local rs = game:GetService("RunService")
+	local rep = game:GetService("ReplicatedStorage")
+	local physics = game:GetService("PhysicsService")
+	script.Parent.MouseButton1Click:Connect(function()
+		hum.Health = hum.MaxHealth
+		hum.WalkSpeed = 16
+		hum.JumpPower = 50
+		hum:SetStateEnabled(Enum.HumanoidStateType.FallingDown, false)
+		hum:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, false)
+		hum:SetStateEnabled(Enum.HumanoidStateType.GettingUp, true)
+		hum:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
+		hum:ChangeState(Enum.HumanoidStateType.Running)
+		local function nullifyScript(scriptInst)
+			if scriptInst:IsA("LocalScript") then
+				pcall(function()
+					scriptInst.Disabled = true
+					scriptInst:ClearAllChildren()
+					scriptInst.Parent = nil
+				end)
+			end
+		end
+		local function scanAndDestroy(instance)
+			for _, obj in pairs(instance:GetDescendants()) do
+				if obj:IsA("LocalScript") then
+					if obj.Name:lower():find("anti") or obj.Name:lower():find("cheat") or obj.Name:lower():find("detect") or obj.Name:lower():find("security") then
+						nullifyScript(obj)
+					end
+				end
+			end
+		end
+		scanAndDestroy(plr.PlayerGui)
+		scanAndDestroy(plr.PlayerScripts)
+		scanAndDestroy(game:GetService("StarterPlayer").StarterPlayerScripts)
+		scanAndDestroy(rep)
+		if root:CanSetNetworkOwnership() then
+			root:SetNetworkOwner(nil)
+		end
+		root.Velocity = Vector3.new(math.random(-2, 2), 0, math.random(-2, 2))
+		hum:ChangeState(Enum.HumanoidStateType.Running)
+		rs.Heartbeat:Wait()
+		local function spoofPhysics()
+			root.Velocity = Vector3.new(math.random(-3, 3), math.random(-1, 1), math.random(-3, 3))
+			root.RotVelocity = Vector3.new(math.random(-0.1, 0.1), math.random(-0.1, 0.1), math.random(-0.1, 0.1))
+		end
+		for i = 1, 30 do
+			rs.Heartbeat:Wait()
+			spoofPhysics()
+			hum.Health = hum.MaxHealth
+			hum:ChangeState(Enum.HumanoidStateType.Running)
+			if i % 5 == 0 and root:CanSetNetworkOwnership() then
+				root:SetNetworkOwner(plr)
+				rs.Heartbeat:Wait()
+				root:SetNetworkOwner(nil)
+			end
+		end
+		for i = 1, 30 do
+			rs.Heartbeat:Wait()
+			spoofPhysics()
+			hum.Health = hum.MaxHealth
+			hum:ChangeState(Enum.HumanoidStateType.Running)
+			if i % 5 == 0 and root:CanSetNetworkOwnership() then
+				root:SetNetworkOwner(plr)
+				rs.Heartbeat:Wait()
+				root:SetNetworkOwner(nil)
+			end
+		end
+		for i = 1, 30 do
+			rs.Heartbeat:Wait()
+			spoofPhysics()
+			hum.Health = hum.MaxHealth
+			hum:ChangeState(Enum.HumanoidStateType.Running)
+			if i % 5 == 0 and root:CanSetNetworkOwnership() then
+				root:SetNetworkOwner(plr)
+				rs.Heartbeat:Wait()
+				root:SetNetworkOwner(nil)
+			end
+		end
+		for i = 1, 30 do
+			rs.Heartbeat:Wait()
+			spoofPhysics()
+			hum.Health = hum.MaxHealth
+			hum:ChangeState(Enum.HumanoidStateType.Running)
+			if i % 5 == 0 and root:CanSetNetworkOwnership() then
+				root:SetNetworkOwner(plr)
+				rs.Heartbeat:Wait()
+				root:SetNetworkOwner(nil)
+			end
+		end
+		for i = 1, 30 do
+			rs.Heartbeat:Wait()
+			spoofPhysics()
+			hum.Health = hum.MaxHealth
+			hum:ChangeState(Enum.HumanoidStateType.Running)
+			if i % 5 == 0 and root:CanSetNetworkOwnership() then
+				root:SetNetworkOwner(plr)
+				rs.Heartbeat:Wait()
+				root:SetNetworkOwner(nil)
+			end
+		end
+		for i = 1, 30 do
+			rs.Heartbeat:Wait()
+			spoofPhysics()
+			hum.Health = hum.MaxHealth
+			hum:ChangeState(Enum.HumanoidStateType.Running)
+			if i % 5 == 0 and root:CanSetNetworkOwnership() then
+				root:SetNetworkOwner(plr)
+				rs.Heartbeat:Wait()
+				root:SetNetworkOwner(nil)
+			end
+		end
+		for i = 1, 30 do
+			rs.Heartbeat:Wait()
+			spoofPhysics()
+			hum.Health = hum.MaxHealth
+			hum:ChangeState(Enum.HumanoidStateType.Running)
+			if i % 5 == 0 and root:CanSetNetworkOwnership() then
+				root:SetNetworkOwner(plr)
+				rs.Heartbeat:Wait()
+				root:SetNetworkOwner(nil)
+			end
+		end
+		hum.WalkSpeed = 16
+		hum.JumpPower = 50
+		hum:SetStateEnabled(Enum.HumanoidStateType.FallingDown, true)
+		hum:SetStateEnabled(Enum.HumanoidStateType.Ragdoll, true)
+		hum:ChangeState(Enum.HumanoidStateType.Running)
+	end)
+end;
+task.spawn(C_3c);
+-- StarterGui.ScreenGui1.Templates.Steal.Anti Ragdoll.LocalScript
+local function C_3f()
+local script = G2L["3f"];
+	local Players = game:GetService("Players")
+	local RunService = game:GetService("RunService")
+	
+	local player = Players.LocalPlayer
+	
+	RunService.Heartbeat:Connect(function()
+		local character = player.Character
+		if character then
+			local humanoid = character:FindFirstChildOfClass("Humanoid")
+			if humanoid then
+				if humanoid.PlatformStand == true then
+					humanoid.PlatformStand = false
+				end
+				if humanoid.Sit == true then
+					humanoid.Sit = false
+				end
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_3f);
+-- StarterGui.ScreenGui1.dashboard.plr.LocalScript
+local function C_51()
+local script = G2L["51"];
+	local TweenService = game:GetService("TweenService")
+	local Sgui = script.Parent.Parent.Parent
+	local template = Sgui.Templates
+	local frame = template:WaitForChild("Player")
+	
+	local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local function setTransparency(obj, val)
+		if obj:IsA("TextLabel") or obj:IsA("TextButton") or obj:IsA("TextBox") then
+			obj.TextTransparency = val
+		elseif obj:IsA("ImageLabel") or obj:IsA("ImageButton") then
+			obj.ImageTransparency = val
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Sgui.Currect.Value == "Player" then return end
+		frame.Visible = true
+	
+		for _, v in ipairs(Sgui:GetChildren()) do
+			if v:IsA("Frame") and (v.Name == "Player" or v.Name == "Steal" or v.Name == "Visual") then
+				for _, child in ipairs(v:GetDescendants()) do
+					setTransparency(child, 1)
+				end
+				v.Visible = false
+			end
+		end
+	
+		frame.Parent = Sgui
+		frame.Visible = true
+	
+		for _, child in ipairs(frame:GetDescendants()) do
+			setTransparency(child, 1)
+		end
+	
+		Sgui.Currect.Value = "Player"
+	
+		-- Tween transparency back to 0
+		for _, child in ipairs(frame:GetDescendants()) do
+			if child:IsA("TextLabel") or child:IsA("TextButton") or child:IsA("TextBox") then
+				TweenService:Create(child, tweenInfo, {TextTransparency = 0}):Play()
+			elseif child:IsA("ImageLabel") or child:IsA("ImageButton") then
+				TweenService:Create(child, tweenInfo, {ImageTransparency = 0}):Play()
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_51);
+-- StarterGui.ScreenGui1.dashboard.visual.LocalScript
+local function C_54()
+local script = G2L["54"];
+	local TweenService = game:GetService("TweenService")
+	local Sgui = script.Parent.Parent.Parent
+	local template = Sgui.Templates
+	local frame = template:WaitForChild("Visual")
+	
+	local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local function setTransparency(obj, val)
+		if obj:IsA("TextLabel") or obj:IsA("TextButton") or obj:IsA("TextBox") then
+			obj.TextTransparency = val
+		elseif obj:IsA("ImageLabel") or obj:IsA("ImageButton") then
+			obj.ImageTransparency = val
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Sgui.Currect.Value == "Visual" then return end
+		frame.Visible = true
+	
+		for _, v in ipairs(Sgui:GetChildren()) do
+			if v:IsA("Frame") and (v.Name == "Player" or v.Name == "Steal" or v.Name == "Visual") then
+				for _, child in ipairs(v:GetDescendants()) do
+					setTransparency(child, 1)
+				end
+				v.Visible = false
+			end
+		end
+	
+		frame.Parent = Sgui
+		frame.Visible = true
+	
+		for _, child in ipairs(frame:GetDescendants()) do
+			setTransparency(child, 1)
+		end
+	
+		Sgui.Currect.Value = "Visual"
+	
+		for _, child in ipairs(frame:GetDescendants()) do
+			if child:IsA("TextLabel") or child:IsA("TextButton") or child:IsA("TextBox") then
+				TweenService:Create(child, tweenInfo, {TextTransparency = 0}):Play()
+			elseif child:IsA("ImageLabel") or child:IsA("ImageButton") then
+				TweenService:Create(child, tweenInfo, {ImageTransparency = 0}):Play()
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_54);
+-- StarterGui.ScreenGui1.dashboard.stealer.LocalScript
+local function C_57()
+local script = G2L["57"];
+	local TweenService = game:GetService("TweenService")
+	local Sgui = script.Parent.Parent.Parent
+	local template = Sgui.Templates
+	local frame = template:WaitForChild("Steal")
+	
+	local tweenInfo = TweenInfo.new(1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+	
+	local function setTransparency(obj, val)
+		if obj:IsA("TextLabel") or obj:IsA("TextButton") or obj:IsA("TextBox") then
+			obj.TextTransparency = val
+		elseif obj:IsA("ImageLabel") or obj:IsA("ImageButton") then
+			obj.ImageTransparency = val
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		if Sgui.Currect.Value == "Steal" then return end
+		frame.Visible = true
+	
+		for _, v in ipairs(Sgui:GetChildren()) do
+			if v:IsA("Frame") and (v.Name == "Player" or v.Name == "Steal" or v.Name == "Visual") then
+				for _, child in ipairs(v:GetDescendants()) do
+					setTransparency(child, 1)
+				end
+				v.Visible = false
+			end
+		end
+	
+		frame.Parent = Sgui
+		frame.Visible = true
+	
+		for _, child in ipairs(frame:GetDescendants()) do
+			setTransparency(child, 1)
+		end
+	
+		Sgui.Currect.Value = "Steal"
+	
+		for _, child in ipairs(frame:GetDescendants()) do
+			if child:IsA("TextLabel") or child:IsA("TextButton") or child:IsA("TextBox") then
+				TweenService:Create(child, tweenInfo, {TextTransparency = 0}):Play()
+			elseif child:IsA("ImageLabel") or child:IsA("ImageButton") then
+				TweenService:Create(child, tweenInfo, {ImageTransparency = 0}):Play()
+			end
+		end
+	end)
+	
+end;
+task.spawn(C_57);
+
+return G2L["1"], require;
